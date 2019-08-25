@@ -1,0 +1,51 @@
+dummyproj
+  \cventry
+    {CSC 585 Algorithms in NLP (Ongoing)} % Role
+    {Supporting Multi-Level Annotations for Medical Literature on Patient, Interventions and Outcomes} % Title
+    {UofA, AZ, U.S.A} % Location
+    {Aug.-Dec. 2018} % Date(s)
+    {
+      \begin{cvitems} % Description(s)
+        \item {The project focuses on implementing a solution to label spans and tokens in medical literature to help study the Interventions to Patients and their Outcomes.}
+        \item {Tools: Python, Tensorflow}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {CSC 560 Database Systems and Implementations} % Conference
+    {Implementing functional components in MINIBASE} % Title
+    {UofA, AZ, U.S.A} % Location
+    {Aug.-Dec. 2017} % Date(s)
+    {
+      \begin{cvitems} % Authors; comma separated
+        \item {The project included implementing Heapfile manager, Buffer manager, B+ tree in a DBMS.}
+        \item {Tools: MINIBASE, C}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {CSC 583 Text Retrieval \& Web Search} % Role
+    {Building (a part of) Watson} % Title
+    {UofA, AZ, U.S.A} % Location
+    {Apr.-May. 2017} % Date(s)
+    {
+      \begin{cvitems} % Description(s)
+        \item {The final outcome was an end-to-end Information Retrieval system that indexes a large set of Wikipedia pages as documents and tries to retrieve top relevant pages for some queries and make a system similar to the Jeopardy game.}
+        \item {Tools: Scala, Apache Maven, Lucene}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {CSC 525 Principles of Computer Networking} % Conference
+    {Implementing a Router} % Title
+    {UofA, AZ, U.S.A} % Location
+    {Aug.- Dec. 2016} % Date(s)
+    {
+      \begin{cvitems} % Authors; comma separated
+        \item {This project included implementing a software router in two stages- a) ARP protocol and IP forwarding, b) PWOSPF routing algorithm. The final outcome was able to successfully forward IP packets with possible status change in wired links.}
+        \item {Tools: C}
+      \end{cvitems}
+    }

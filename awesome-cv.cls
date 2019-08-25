@@ -74,7 +74,7 @@
 % To support LaTeX quoting style
 \defaultfontfeatures{Ligatures=TeX}
 % Needed to manage math fonts
-\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
+\RequirePackage[math-style=TeX]{unicode-math}
 % Needed to use icons from font-awesome
 % (https://github.com/posquit0/latex-fontawesome)
 \RequirePackage{fontawesome}
@@ -136,9 +136,9 @@
 \definecolor{blue}{HTML}{6CE0F1}
 % Text colors
 \definecolor{darktext}{HTML}{414141}
-\colorlet{text}{darkgray}
-\colorlet{graytext}{gray}
-\colorlet{lighttext}{lightgray}
+\colorlet{text}{black}
+\colorlet{graytext}{darkgray}
+\colorlet{lighttext}{gray}
 % Awesome colors
 \definecolor{awesome-emerald}{HTML}{00A388}
 \definecolor{awesome-skyblue}{HTML}{0395DE}
@@ -164,7 +164,7 @@
 %                Configuration for fonts
 %-------------------------------------------------------------------------------
 % Set the FontAwesome font to be up-to-date.
-\newfontfamily\FA[Path=\@fontdir]{FontAwesome}
+\setfontfamily\FA[Path=\@fontdir]{FontAwesome}
 % Set font for header (default is Roboto)
 \newfontfamily\headerfont[
   Path=\@fontdir,
@@ -176,7 +176,7 @@
 
 \newfontfamily\headerfontlight[
   Path=\@fontdir,
-  UprightFont=*-Thin,
+  UprightFont=*-Regular,
   ItalicFont=*-ThinItalic,
   BoldFont=*-Medium,
   BoldItalicFont=*-MediumItalic,
@@ -191,15 +191,15 @@
 %-------------------------------------------------------------------------------
 % Configure styles for each CV elements
 % For fundamental structures
-\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{32pt}{1em}\headerfontlight\color{graytext} #1}}
-\newcommand*{\headerlastnamestyle}[1]{{\fontsize{32pt}{1em}\headerfont\bfseries\color{text} #1}}
-\newcommand*{\headerpositionstyle}[1]{{\fontsize{10.6pt}{1em}\bodyfont\scshape\color{awesome} #1}}
+\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{28pt}{1em}\headerfontlight\color{graytext} #1}}
+\newcommand*{\headerlastnamestyle}[1]{{\fontsize{28pt}{1em}\headerfont\bfseries\color{text} #1}}
+\newcommand*{\headerpositionstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\scshape\color{awesome} #1}}
 \newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1em}\headerfont\itshape\color{lighttext} #1}}
 \newcommand*{\headersocialstyle}[1]{{\fontsize{8pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
-\newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{awesome} #1}}
-\newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
+\newcommand*{\sectionstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries\color{awesome} #1}}
+\newcommand*{\subsectionstyle}[1]{{\fontsize{11pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
 \newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
 
 % For elements of entry
@@ -368,8 +368,8 @@
 %% Define helper macros a user can change easily
 % Header
 \newcommand{\acvHeaderNameDelim}{\space}
-\newcommand{\acvHeaderAfterNameSkip}{2.9mm}
-\newcommand{\acvHeaderAfterPositionSkip}{1.5mm}
+\newcommand{\acvHeaderAfterNameSkip}{2.5mm}
+\newcommand{\acvHeaderAfterPositionSkip}{1.2mm}
 \newcommand{\acvHeaderAfterAddressSkip}{-.5mm}
 \newcommand{\acvHeaderIconSep}{\space}
 \newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
@@ -398,7 +398,7 @@
 % Usage: \makecvheader
 \newcommand*{\makecvheader}{%
   \begin{center}
- \headerlastnamestyle{\@firstname}\headerlastnamestyle{{}\acvHeaderNameDelim\@lastname}%
+  \headerfirstnamestyle{\@firstname}\headerlastnamestyle{{}\acvHeaderNameDelim\@lastname}%
     \\[\acvHeaderAfterNameSkip]%
     \ifthenelse{\isundefined{\@position}}{}{\headerpositionstyle{\@position\\[\acvHeaderAfterPositionSkip]}}%
     \ifthenelse{\isundefined{\@address}}{}{\headeraddressstyle{\@address\\[\acvHeaderAfterAddressSkip]}}%
@@ -408,98 +408,74 @@
       \ifthenelse{\isundefined{\@mobile}}%
         {}%
         {%
-          {\color{awesome}\faMobile}\acvHeaderIconSep\@mobile%
+          \faMobile\acvHeaderIconSep\@mobile%
           \setbool{isstart}{false}%
         }%
       \ifthenelse{\isundefined{\@email}}%
         {}%
         {%
-          \ifbool{isstart}%
-            {%
-              \setbool{istart}{false}%
-            }%
-            {\acvHeaderSocialSep}%
-          \href{mailto:\@email}{{\color{awesome}\faEnvelope}\acvHeaderIconSep\@email}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{mailto:\@email}{\faEnvelope\acvHeaderIconSep\@email}%
         }%
       \ifthenelse{\isundefined{\@homepage}}%
         {}%
         {%
-          \ifbool{isstart}%
-            {%
-              \setbool{istart}{false}%
-            }%
-            {\acvHeaderSocialSep}%
-          \href{http://\@homepage}{{\color{awesome}\faHome}\acvHeaderIconSep\@homepage}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{http://\@homepage}{\faHome\acvHeaderIconSep\@homepage}%
         }%
       \ifthenelse{\isundefined{\@github}}%
         {}%
         {%
-          \ifbool{isstart}%
-            {%
-              \setbool{istart}{false}%
-            }%
-            {\acvHeaderSocialSep}%
-          \href{https://github.com/\@github}{{\color{awesome}\faGithubSquare}\acvHeaderIconSep\@github}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://github.com/\@github}{\faGithubSquare\acvHeaderIconSep\@github}%
+        }%
+      \ifthenelse{\isundefined{\@gitlab}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://gitlab.com/\@gitlab}{\faGitlab\acvHeaderIconSep\@gitlab}%
         }%
       \ifthenelse{\isundefined{\@stackoverflowid}}%
         {}%
         {%
-          \ifbool{isstart}%
-            {%
-              \setbool{istart}{false} %
-            }%
-            {\acvHeaderSocialSep}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://stackoverflow.com/users/\@stackoverflowid}{\faStackOverflow\acvHeaderIconSep\@stackoverflowname}%
         }%
       \ifthenelse{\isundefined{\@linkedin}}%
         {}%
         {%
-          \ifbool{isstart}%
-            {%
-              \setbool{istart}{false}%
-            }%
-            {\acvHeaderSocialSep}%
-          \href{https://www.linkedin.com/in/\@linkedin}{{\color{awesome}\faLinkedinSquare}\acvHeaderIconSep\@linkedin}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://www.linkedin.com/in/\@linkedin}{\faLinkedinSquare\acvHeaderIconSep\@linkedin}%
         }%
       \ifthenelse{\isundefined{\@twitter}}%
         {}%
         {%
-          \ifbool{isstart}%
-            {%
-              \setbool{istart}{false} %
-            }%
-            {\acvHeaderSocialSep}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://twitter.com/\@twitter}{\faTwitter\acvHeaderIconSep\@twitter}%
         }%
       \ifthenelse{\isundefined{\@skype}}%
         {}%
         {%
-          \ifbool{isstart}%
-            {%
-              \setbool{istart}{false} %
-            }%
-            {\acvHeaderSocialSep}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \faSkype\acvHeaderIconSep\@skype%
+        }%
+      \ifthenelse{\isundefined{\@reddit}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://www.reddit.com/user/\@reddit}{\faReddit\acvHeaderIconSep\@reddit}%
+        }%
+      \ifthenelse{\isundefined{\@xing}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://www.xing.com/profile/\@xing}{\faXingSquare\acvHeaderIconSep\@xing}
         }%
       \ifthenelse{\isundefined{\@extrainfo}}%
         {}%
         {%
-          \ifbool{isstart}%
-            {%
-              \setbool{istart}{false} %
-            }%
-            {\acvHeaderSocialSep}%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \@extrainfo%
-        }%
-      \ifthenelse{\isundefined{\@location}}%
-        {}%
-        {%
-          \ifbool{isstart}%
-            {%
-              \setbool{istart}{false} %
-            }%
-            {\acvHeaderSocialSep}%
-          {\color{awesome}\faMapMarker}\acvHeaderIconSep\@location%
         }%
     } \\[\acvHeaderAfterSocialSkip]%
     \ifthenelse{\isundefined{\@quote}}%
@@ -545,7 +521,7 @@
 
 % Define an environment for cventry
 \newenvironment{cventries}{%
-  \vspace{-5.0mm}
+  %\vspace{-5.0mm}
   \begin{center}
 }{%
   \end{center}
@@ -556,7 +532,7 @@
   \vspace{-1.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{0.5\textwidth - 0.3cm}{@{\extracolsep{\fill}} m{1.1cm} L{0.5\textwidth - 2.9cm} R{1.5cm}}
+  \begin{tabular*}{0.5\textwidth - 0.3cm}{@{\extracolsep{\fill}} m{0cm} L{0.5\textwidth - 1.85cm} R{1.55cm}}
     \ifempty{#2#3}
       {#6 & \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
       {#6 & \entrytitlestyle{#2} & \entrylocationstyle{#3} \\
@@ -668,10 +644,11 @@
 
 % Define an environment for cvskill
 \newenvironment{cvskills}{%
+  \vspace{-2mm}
   \begin{center}
-    \setlength\tabcolsep{1ex}
+    \setlength\tabcolsep{0.5ex}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{0.5\textwidth - 0.3cm}[t]{@{\extracolsep{\fill}} R{2.5cm} L{0.5\textwidth - 2.8cm}}
+    \begin{tabular*}{0.5\textwidth - 0.3cm}[t]{@{\extracolsep{\fill}} R{2.3cm} L{0.5\textwidth - 1.4cm}}
 }{%
     \end{tabular*}
   \end{center}
