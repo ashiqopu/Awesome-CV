@@ -401,7 +401,13 @@
   \headerfirstnamestyle{\@firstname}\headerlastnamestyle{{}\acvHeaderNameDelim\@lastname}%
     \\[\acvHeaderAfterNameSkip]%
     \ifthenelse{\isundefined{\@position}}{}{\headerpositionstyle{\@position\\[\acvHeaderAfterPositionSkip]}}%
-    \ifthenelse{\isundefined{\@address}}{}{\headeraddressstyle{\@address\\[\acvHeaderAfterAddressSkip]}}%
+    \ifthenelse{\isundefined{\@address}}
+    {}
+    {
+      \href{https://www.google.com/maps/place/Tempe,+AZ}
+      {\faMapMarker\acvHeaderIconSep\@address\\[\acvHeaderAfterAddressSkip]}
+      %\headeraddressstyle{\@address\\[\acvHeaderAfterAddressSkip]}
+    }%
     \headersocialstyle{%
       \newbool{isstart}%
       \setbool{isstart}{true}%
@@ -648,7 +654,7 @@
   \begin{center}
     \setlength\tabcolsep{0.5ex}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{0.5\textwidth - 0.3cm}[t]{@{\extracolsep{\fill}} R{2.3cm} L{0.5\textwidth - 1.4cm}}
+    \begin{tabular*}{0.5\textwidth - 0.3cm}[t]{@{\extracolsep{\fill}} R{1.5cm} L{0.5\textwidth - 1.6cm}}
 }{%
     \end{tabular*}
   \end{center}
