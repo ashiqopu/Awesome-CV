@@ -198,7 +198,7 @@
 \newcommand*{\headersocialstyle}[1]{{\fontsize{8pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
-\newcommand*{\sectionstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries\color{awesome} #1}}
+\newcommand*{\sectionstyle}[1]{{\fontsize{13pt}{1em}\bodyfont\bfseries\color{awesome} #1}}
 \newcommand*{\subsectionstyle}[1]{{\fontsize{11pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
 \newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
 
@@ -654,7 +654,8 @@
   \begin{center}
     \setlength\tabcolsep{0.5ex}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{0.5\textwidth - 0.3cm}[t]{@{\extracolsep{\fill}} R{1.5cm} L{0.5\textwidth - 1.6cm}}
+    \begin{tabular*}
+      {0.5\textwidth - 0.3cm}[t]{@{\extracolsep{\fill}} R{1.5cm} L{0.5\textwidth - 1.6cm}}
 }{%
     \end{tabular*}
   \end{center}
