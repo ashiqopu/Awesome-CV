@@ -11,54 +11,105 @@
 
 %---------------------------------------------------------
 \cventry
-    {Student developer (Tools: boostc++, Gerrit, Jenkins)} % Role
-    {NFD: Named-Data Forwarding Daemon} % Title
-    {} % Location
-    {2016-Present} % Date(s)
-    {
-      \begin{cvitems} % Description(s)
-        \item {A network forwarder that evolves together with the NDN protocol (Site: \url{https://named-data.net/doc/NFD/current/}).}
-      \end{cvitems}
-    }
-    {}
+  {} % Role
+  {NDN in mobile ad-hoc, delay-tolerant and challenging networks.} % Title
+  {Ongoing} % Location
+  {} % Date(s)
+  {
+    \vspace{-3mm}
+    \begin{cvitems} % Description(s)
+      \item {\textbf{Problem:} Identify existing IP-network limitations and improve network performance in mobile ad-hoc, delay-tolerant networks.}
+      \item {\textbf{Primary solution:} Understanding effect of NDN-based Interest-Data exchange on network performance.}
+      \item {\textit{Sub-solution-1:} RTT-based hop-by-hop neighbor update for fast reaction to network dynamics.}
+      \item {\textit{Sub-solution-2:} Neighborhood measurement in long-delay networks.}
+      \item {\textbf{Expected outcome:} High data retrieval rate at low latency under moderate to high mobility and high reliability in long-delay communication.}
+      \item {\textbf{Publications:} One under review at IEEE Globecom 2020.}
+      \item {Tools: ndnSIM (built on NS-3), C++}
+    \end{cvitems}
+  }
+  {}
+
+%---------------------------------------------------------
+% \cventry
+%   {Student developer (Tools: boostc++, Gerrit, Jenkins)} % Role
+%   {NFD: Named-Data Forwarding Daemon} % Title
+%   {2016 - } % Location
+%   {} % Date(s)
+%   {
+%     \begin{cvitems} % Description(s)
+%       \item {A network forwarder that evolves together with the NDN protocol (Site: \url{https://named-data.net/doc/NFD/current/}).}
+%     \end{cvitems}
+%   }
+%   {}
 
 %---------------------------------------------------------
 \cventry
-    {CSC 585 Algorithms in NLP} % Role
+  {} % Conference
+  {Network Coded Data Dissemination in RSU-based Vehicular Ad-hoc Networks (VANETs)} % Title
+  {2014-2019} % Location
+  {} % Date(s)
+  {
+    \vspace{-3mm}
+    \begin{cvitems} % Authors; comma separated
+      \item {\textbf{Problem:} Minimize wireless broadcast data transmissions and overall Vehicle-to-RSU communication latency in VANETs to provide improved road-safety and infotainment.}
+      \item {\textbf{Primary solution:} Network coded wireless broadcast with optimized scheduling algorithms for time sensitive data request}
+      \item {\textit{Sub-solution-1}: Co-operative RSU-to-RSU cache information transfer which excludes explicit upload by vehicles.}
+      \item {\textit{Sub-solution-2}: Coding for heterogeneous data with weighted moving average of maximum data size in a clique.}
+      \item {\textit{Sub-solution-3}: Time-sensitive heuristic coding for heterogeneous data in real-time multi-item query.}
+      \item {\textbf{Results}: Significant lower latency and wireless broadcast overhead with high data-retrieval rate.}
+      \item {\textbf{Publications:} Two Journals and four Conference papers. Two as first author, two as second and two as third (\href{https://scholar.google.com/citations?user=hYY1wDEAAAAJ&hl=en}{\textcolor{cyan}{Google Scholar}}).}
+      \item {Tools: CSIM}
+    \end{cvitems}
+  }
+  {}
+
+%---------------------------------------------------------
+\cventry
+    %{CSC 585 Algorithms in NLP} % Role
+    {}
     {Weighted Dropout: Supporting Multi-Level Annotations for Medical Literature on Patient, Interventions and Outcomes} % Title
-    {UofA, AZ} % Location
-    {Fall 2018} % Date(s)
+    {2018} % Location
+    {}
+    %{Fall 2018} % Date(s)
     {
+      \vspace{-3mm}
       \begin{cvitems} % Description(s)
-        \item {Variable dropout-probability based on distance from tokens of interest.}
+        \item {\textbf{Problem:} Annotating abstracts from medical literature.}
+        \item {\textbf{Solution:} Variable-dropout based on distance from tokens of interest.}
         \item {Maintains higher context information from all hot-word neighbors.}
-        \item {Near-SotA performance with significantly lower model training time.}
-        \item {Tools: Python, Tensorflow, Docker.}
+        \item {\textbf{Outcome:} Near-SotA performance with very low model training time.}
+        \item {\textit{Tools:} Python, Tensorflow, Docker.}
       \end{cvitems}
     }
     {}
 
 %---------------------------------------------------------
   \cventry
-    {CSC 560 Database Systems and Implementations} % Conference
-    {Implementing components of MINIBASE in C} % Title
-    {UofA, AZ} % Location
-    {Fall 2017} % Date(s)
+    %{CSC 560 Database Systems and Implementations} % Conference
+    {}
+    {Components of MINIBASE DBMS in C} % Title
+    {2017} % Location
+    {}
+    %{Fall 2017} % Date(s)
     {
+      \vspace{-3mm}
       \begin{cvitems} % Authors; comma separated
-        \item {Implemented Heapfile manager, Buffer manager, B+ tree in a DBMS.}
-        % \item {Tools: MINIBASE, C}
+        \item {Implemented self-resizing Heapfile manager, Buffer manager}
+        \item {Implemented B+ tree (non-balancing)}
       \end{cvitems}
     }
     {}
 
 %---------------------------------------------------------
   \cventry
-    {CSC 583 Text Retrieval \& Web Search} % Role
+    %{CSC 583 Text Retrieval \& Web Search} % Role
+    {}
     {Building (a part of) Watson} % Title
-    {UofA, AZ} % Location
-    {Spring 2017} % Date(s)
+    {2017} % Location
+    {}
+    %{Spring 2017} % Date(s)
     {
+      \vspace{-3mm}
       \begin{cvitems} % Description(s)
         \item {An end-to-end Information Retrieval system that indexes a large set of Wikipedia pages to retrieve top relevant pages for short queries similar to the Jeopardy game.}
         \item {Tools: Scala, Apache Maven, Lucene.}
@@ -69,31 +120,54 @@
 
 %---------------------------------------------------------
   \cventry
-    {CSC 525 Principles of Computer Networking} % Conference
-    {Implementing a Software Router in C} % Title
-    {UofA, AZ} % Location
-    {Fall 2016} % Date(s)
+    %{CSC 583 Text Retrieval \& Web Search} % Role
+    {}
+    {Email Spam classifier} % Title
+    {2017} % Location
+    {}
+    %{Spring 2017} % Date(s)
     {
+      \vspace{-3mm}
+      \begin{cvitems} % Description(s)
+        \item {Built a spam classifier model by training with spam labeled/unlabeled dataset and finding similarity between unknown dataset}
+        \item {Tools: Scala, Apache Maven, Lucene.}
+        %\item {Tools: Scala, Apache Maven, Lucene}
+      \end{cvitems}
+    }
+    {}
+
+%---------------------------------------------------------
+  \cventry
+    %{CSC 525 Principles of Computer Networking} % Conference
+    {}
+    {Implementing a Software Router in C} % Title
+    {2016} % Location
+    {}
+    %{Fall 2016} % Date(s)
+    {
+      \vspace{-3mm}
       \begin{cvitems} % Authors; comma separated
-        \item {A software router with ARP protocol, IP forwarding, and PWOSPF routing algorithm that can forward IP packets while reacting to link changes.}
+        \item {\textit{Problem:} forward IP packets under possible link changes.}
+        \item {\textit{Solution:} Wrote the ARP protocol, IP forwarding, and PWOSPF routing algorithm that can react to link changes.}
         %\item {Tools: C}
       \end{cvitems}
     }
     {}
 
 %---------------------------------------------------------
-  % \cventry
-  %   {Undergraduate 6th Semester Software Engineering Project} % Conference
-  %   {Gas Station Automation} % Title
-  %   {Bangladesh} % Location
-  %   {2014} % Date(s)
-  %   {
-  %     \begin{cvitems} % Authors; comma separated
-  %       \item {Easy and secured management of gas station's monetary, repository, human resource and report generation using cloud services.}
-  %       \item {Tools: C\#, SQL, ASP.NET, Crystal Report, JavaScript}
-  %     \end{cvitems}
-  %   }
-  %   {}
+  \cventry
+    {} % Conference
+    {Gas Station Automation} % Title
+    {2014} % Location
+    {} % Date(s)
+    {
+      \vspace{-3mm}
+      \begin{cvitems} % Authors; comma separated
+        \item {Easy and secured management of gas station's monetary, repository, and human resources and report generation using cloud services.}
+        \item {Tools: C\#, SQL, ASP.NET, Crystal Report, JavaScript}
+      \end{cvitems}
+    }
+    {}
 
 %---------------------------------------------------------
 \end{cventries}
