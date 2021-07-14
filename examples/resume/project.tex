@@ -1,8 +1,10 @@
 %-------------------------------------------------------------------------------
 %	SECTION TITLE
 %-------------------------------------------------------------------------------
-\cvsection{Projects}
 
+% \vspace{3mm}
+
+\cvsection{Projects}
 
 %-------------------------------------------------------------------------------
 %	CONTENT
@@ -18,13 +20,14 @@
   {
     \vspace{-3mm}
     \begin{cvitems} % Description(s)
-      \item {\textbf{Problem:} Identify existing IP-network limitations and improve network performance in mobile ad-hoc, delay-tolerant networks.}
-      \item {\textbf{Primary solution:} Understanding effect of NDN-based Interest-Data exchange on network performance.}
-      \item {\textit{Sub-solution-1:} RTT-based hop-by-hop neighbor update for fast reaction to network dynamics.}
-      \item {\textit{Sub-solution-2:} Neighborhood measurement in long-delay networks.}
-      \item {\textbf{Expected outcome:} High data retrieval rate at low latency under moderate to high mobility and high reliability in long-delay communication.}
-      \item {\textbf{Publications:} One under review at IEEE Globecom 2020.}
-      \item {Tools: ndnSIM (built on NS-3), C++}
+      % \item {\textbf{Problem:} Identify existing IP-network limitations and improve network performance in mobile ad-hoc, delay-tolerant networks.}
+      % \item {\textbf{Primary solution:} Understanding effect of NDN-based Interest-Data exchange on network performance.}
+      % \item {\textit{Sub-solution-1:} RTT-based hop-by-hop neighbor update for fast reaction to network dynamics.}
+      % \item {\textit{Sub-solution-2:} Neighborhood measurement in long-delay networks.}
+      % \item {\textbf{Expected outcome:} High data retrieval rate at low latency under moderate to high mobility and high reliability in long-delay communication.}
+      \item {Improving data retrieval rate, throughput and reducing latency using data-centric approach compared to traditional TCP/IP.}
+      \item {\textbf{Publications:} Two accepted at LCN 2021, IC3N 2021 and one published at ICC Workshops 2020.}
+      \item {\textit{Tools:} ndnSIM, C++}
     \end{cvitems}
   }
   {}
@@ -51,14 +54,16 @@
   {
     \vspace{-3mm}
     \begin{cvitems} % Authors; comma separated
-      \item {\textbf{Problem:} Minimize wireless broadcast data transmissions and overall Vehicle-to-RSU communication latency in VANETs to provide improved road-safety and infotainment.}
-      \item {\textbf{Primary solution:} Network coded wireless broadcast with optimized scheduling algorithms for time sensitive data request}
-      \item {\textit{Sub-solution-1}: Co-operative RSU-to-RSU cache information transfer which excludes explicit upload by vehicles.}
-      \item {\textit{Sub-solution-2}: Coding for heterogeneous data with weighted moving average of maximum data size in a clique.}
-      \item {\textit{Sub-solution-3}: Time-sensitive heuristic coding for heterogeneous data in real-time multi-item query.}
-      \item {\textbf{Results}: Significant lower latency and wireless broadcast overhead with high data-retrieval rate.}
+      % \item {\textbf{Problem:} Minimize wireless broadcast data transmissions and overall Vehicle-to-RSU communication latency in VANETs to provide improved road-safety and infotainment.}
+      % \item {\textbf{Primary solution:} Network coded wireless broadcast with optimized scheduling algorithms for time sensitive data request}
+      % \item {\textit{Sub-solution-1}: Co-operative RSU-to-RSU cache information transfer which excludes explicit upload by vehicles.}
+      % \item {\textit{Sub-solution-2}: Coding for heterogeneous data with weighted moving average of maximum data size in a clique.}
+      % \item {\textit{Sub-solution-3}: Time-sensitive heuristic coding for heterogeneous data in real-time multi-item query.}
+      % \item {\textbf{Results}: Significant lower latency and wireless broadcast overhead with high data-retrieval rate.}
+      \item {Minimize wireless broadcast data transmissions and overall Vehicle-to-RSU communication latency to provide improved road-safety and infotainment.}
+      \item {Achieved significant lower latency and wireless broadcast overhead with high data-retrieval rate.}
       \item {\textbf{Publications:} Two Journals and four Conference papers. Two as first author, two as second and two as third (\href{https://scholar.google.com/citations?user=hYY1wDEAAAAJ&hl=en}{\textcolor{cyan}{Google Scholar}}).}
-      \item {Tools: CSIM}
+      \item {\textit{Tools:} CSIM (C, C++)}
     \end{cvitems}
   }
   {}
@@ -74,10 +79,13 @@
     {
       \vspace{-3mm}
       \begin{cvitems} % Description(s)
-        \item {\textbf{Problem:} Annotating abstracts from medical literature.}
-        \item {\textbf{Solution:} Variable-dropout based on distance from tokens of interest.}
-        \item {Maintains higher context information from all hot-word neighbors.}
-        \item {\textbf{Outcome:} Near-SotA performance with near-half model training time.}
+        % \item {\textbf{Problem:} Annotating abstracts from medical literature.}
+        % \item {\textbf{Solution:} Variable-dropout based on distance from tokens of interest.}
+        % \item {Maintains higher context information from all hot-word neighbors.}
+        % \item {\textbf{Outcome:} Near-SotA performance with near-half model training time.}
+        \item {Distance-based variable-dropout using tokens of interest for annotating abstracts from medical literature.}
+        \item {Focusing on contextual realationship in sparse dataset.}
+        \item {Near-SotA performance with near-half model training time.}
         \item {\textit{Tools:} Python, Tensorflow, Docker.}
       \end{cvitems}
     }
@@ -112,13 +120,13 @@
       \vspace{-3mm}
       \begin{cvitems} % Description(s)
         \item {An end-to-end Information Retrieval system that indexes a large set of Wikipedia pages to retrieve top relevant pages for short queries similar to the Jeopardy game.}
-        \item {Tools: Scala, Apache Maven, Lucene.}
+        \item {\textit{Tools:} Scala, Apache Maven, Lucene.}
         %\item {Tools: Scala, Apache Maven, Lucene}
       \end{cvitems}
     }
     {}
 
-%---------------------------------------------------------
+% --------------------------------------------------------
   \cventry
     %{CSC 583 Text Retrieval \& Web Search} % Role
     {}
@@ -130,7 +138,7 @@
       \vspace{-3mm}
       \begin{cvitems} % Description(s)
         \item {Built a spam classifier model by training with spam labeled/unlabeled dataset and finding similarity between unknown dataset}
-        \item {Tools: Scala, Apache Maven, Lucene.}
+        \item {\textit{Tools:} Scala, Apache Maven, Lucene.}
         %\item {Tools: Scala, Apache Maven, Lucene}
       \end{cvitems}
     }
@@ -147,12 +155,30 @@
     {
       \vspace{-3mm}
       \begin{cvitems} % Authors; comma separated
-        \item {\textit{Problem:} forward IP packets under possible link changes.}
-        \item {\textit{Solution:} Wrote the ARP protocol, IP forwarding, and PWOSPF routing algorithm that can react to link changes.}
+        % \item {\textit{Problem:} forward IP packets under possible link changes.}
+        % \item {\textit{Solution:} Wrote the ARP protocol, IP forwarding, and PWOSPF routing algorithm that can react to link changes.}
+        \item {Wrote the ARP protocol for IP forwarding, and PWOSPF routing algorithm that can react to link changes.}
         %\item {Tools: C}
       \end{cvitems}
     }
     {}
+
+% %---------------------------------------------------------
+
+%   \cventry
+%     {}
+%     {Counter and Arithmatic unit for Xilinx Spartan-II} % Title
+%     {2014} % Location
+%     {}
+%     %{Spring 2017} % Date(s)
+%     {
+%       \vspace{-3mm}
+%       \begin{cvitems} % Description(s)
+%         \item {Built a seven segment counter and arithmatic unit using Verilog for Xilinx Spartan-II FPGA board}
+%         %\item {Tools: Scala, Apache Maven, Lucene}
+%       \end{cvitems}
+%     }
+%     {}
 
 %---------------------------------------------------------
   \cventry
@@ -168,6 +194,21 @@
       \end{cvitems}
     }
     {}
+
+% %---------------------------------------------------------
+%   \cventry
+%     {} % Conference
+%     {Car design with Microcontroller} % Title
+%     {2013} % Location
+%     {} % Date(s)
+%     {
+%       \vspace{-3mm}
+%       \begin{cvitems} % Authors; comma separated
+%         \item {Designed an 8-bit instruction controlled dual motor car with Atmega8 microcontroller}
+%         \item {Tools: C, Atmel ATMEGA8}
+%       \end{cvitems}
+%     }
+%     {}
 
 %---------------------------------------------------------
 \end{cventries}
